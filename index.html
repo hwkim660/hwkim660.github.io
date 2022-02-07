@@ -50,6 +50,11 @@ function init() {
   canvas.addEventListener('mouseout',  mouseUp,  false);  
   canvas.addEventListener('dblclick', doubleClick, false);
   
+  canvas.addEventListener("touchstart", handleStart, false);
+  canvas.addEventListener("touchend", handleEnd, false);
+  canvas.addEventListener("touchcancel", handleCancel, false);
+  canvas.addEventListener("touchmove", handleMove, false);
+  
   window.onresize = function(event) {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
